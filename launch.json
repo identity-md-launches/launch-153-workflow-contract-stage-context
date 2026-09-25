@@ -1,0 +1,22 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "SeatCompute",
+    "name": "Seat Compute",
+    "symbol": "COMPUTE",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "ComputeProject",
+      "constructorArgs": ["$token"]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "Sepolia launch for the Identity MD seat compute dashboard. Deploy SeatCompute first, then ComputeProject with the launch token address. The companion exposes an immutable token address, version 1 and site label imd-compute; usage accounting remains off-chain. Neither contract has an owner role or requires initialization. The pool pairs with native ETH and has no hook. initialPrice is decimal sqrtPriceX96; services apply the pinned policy's effective opening price and provide signed artifact linkage. Deployment and frontend/IPFS hosting follow this contract stage."
+}
